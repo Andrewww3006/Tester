@@ -1,9 +1,38 @@
 package com.company;
 
+//import com.sun.tools.javac.util.List;
+
+//import java.awt.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+
+
+
+        /*String str = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+        int counter = 0;
+        for(int i = 0; i < str.length(); i++){
+            if (str.charAt(i)<='m')counter++;
+
+        }
+        System.out.print(counter + "/" + str.length());*/
+
+    //amounts of x's and o's
+        /*String str = "ooxXm";
+        str.toLowerCase();
+        int xCounter = 0;
+        int oCounter = 0;
+        char[] charArray = str.toCharArray();
+
+        for(char x: charArray){
+            if (x == 'x') xCounter++;
+            if (x == 'o') oCounter++;
+        }
+        boolean xo = xCounter == oCounter;
+        System.out.println(xo);*/
+
+        /*morseCode
         int letterCounter = 0;
         int wordCounter = 0;
         int spaceCounter = 0;
@@ -38,7 +67,7 @@ public class Main {
         System.out.println(spaceCounter);
         System.out.println(letterCounter);
         System.out.println(wordCounter+1);
-
+*/
     }
 
 }
