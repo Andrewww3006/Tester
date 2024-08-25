@@ -8,6 +8,19 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String[] stringArray = new String[5];
+        char sym = '*';
+        String str = "";
+        for (int i = 0; i < 5; i++) {
+            //for (int j = 0; j < i+1; j++)
+            int j = 0;
+
+
+            stringArray[i] = str;
+            str = "";
+        }
+        for (String x: stringArray)
+            System.out.println(x);
 
 
         /*String str = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
