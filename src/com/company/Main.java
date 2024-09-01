@@ -4,10 +4,33 @@ package com.company;
 
 //import java.awt.*;
 
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 public class Main {
 
     public static void main(String[] args) {
-        int nFloors = 3;
+        //Delete occurrences of an element if it occurs more than n times
+        int[] elements = new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 };
+
+        Map<Integer, Integer> frequency = Arrays.stream(elements).boxed().collect(Collections.singletonMap(Function.identity(), Function.identity()));
+
+
+        /*elements.
+        int maxOccurrences = 3;
+        int element = 0;
+        for (int i = 0 ; i < elements.length; i++){
+            elements[i] = element;
+            for (int j = )
+            if (elements[i] == 7)
+                elements[i].
+        }
+*/
+
+
+        /*int nFloors = 3;
         int starCounter = 1;
         char star = '*';
         char space = '_';
@@ -31,7 +54,7 @@ public class Main {
         }
         for (String x: stringArray)
             System.out.println(x);
-
+*/
 
         /*String str = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
         int counter = 0;
