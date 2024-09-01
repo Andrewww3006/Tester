@@ -7,17 +7,27 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-
-        String[] stringArray = new String[5];
-        char sym = '*';
+        int nFloors = 3;
+        int starCounter = 1;
+        char star = '*';
+        char space = '_';
         String str = "";
-        for (int i = 0; i < 5; i++) {
-            //for (int j = 0; j < i+1; j++)
-            int j = 0;
-
-
-            stringArray[i] = str;
+        for (int x = 0; x < nFloors-1; x++)
+        starCounter = starCounter+2;
+        String[] stringArray = new String[nFloors];
+        for (int i = 0; i < nFloors; i++) {
+            for (int j = 0; j < starCounter; j++) {
+                if (j < starCounter/2-i || j > starCounter/2+i)
+                    str+=space;
+                else
+                str += star;
+            }
+            if (i!=nFloors-1)
+                stringArray[i] = str + ',';
+            else
+                stringArray[i] = str;
             str = "";
+
         }
         for (String x: stringArray)
             System.out.println(x);
