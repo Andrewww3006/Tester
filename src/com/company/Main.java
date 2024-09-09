@@ -14,8 +14,29 @@ public class Main {
     public static void main(String[] args) {
         //Delete occurrences of an element if it occurs more than n times
         int[] elements = new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 };
+        List<Integer> integerList = Arrays.stream(elements).boxed().toList();
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+        List<Integer> deletenthList = new ArrayList<>();
+        for (Integer x: integerList) {
+            frequencyMap.put(x, frequencyMap.getOrDefault(x,0) + 1);
+            if(frequencyMap.getOrDefault(x,0)  < 3)
+                deletenthList.add(x);
+        }
 
-        Map<Integer, Integer> frequency = Arrays.stream(elements).boxed().collect(Collections.singletonMap(Function.identity(), Function.identity()));
+        //deletenthList.forEach(System.out::print);
+
+        int[] deleteElements = new int[deletenthList.size()];
+        for (int i = 0; i < deleteElements.length; i++) {
+            deleteElements[i] = deletenthList.get(i);
+            System.out.print(deleteElements[i]);
+        }
+        //System.out.println(frequencyMap);
+      // integerList.stream().filter(s -> frequencyMap.containsValue(s) && frequencyMap.containsKey());
+
+
+
+
+        //Map<Integer, Integer> frequency = Arrays.stream(elements).boxed().collect(Collections.singletonMap(Function.identity(), Function.identity()));
 
 
         /*elements.
