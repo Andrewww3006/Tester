@@ -12,7 +12,36 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
+
+        //Find The Parity Outlier
+        int[] elements = new int[] { 1, 3, 7, 2, 0};
+        int evenCounter = 0;
+        int oddCounter = 0;
+
+        for (int x: elements) {
+
+            if (x%2==0){
+                evenCounter++;
+            }
+            if (x%2==1){
+                oddCounter++;
+            }
+
+        }
+        if (oddCounter>evenCounter)
+            for(int y:elements){
+                if(y%2==0)
+                    System.out.println(y);
+            }
+        if (oddCounter<evenCounter)
+            for(int y:elements){
+                if(y%2==1)
+                    System.out.println(y);
+            }
+        System.out.println("evenCounter = " + evenCounter + "; oddCounter = " + oddCounter);
+        System.out.println(-3%2);
         //Delete occurrences of an element if it occurs more than n times
+        /*
         int[] elements = new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 };
         List<Integer> integerList = Arrays.stream(elements).boxed().toList();
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
@@ -37,7 +66,7 @@ public class Main {
 
 
         //Map<Integer, Integer> frequency = Arrays.stream(elements).boxed().collect(Collections.singletonMap(Function.identity(), Function.identity()));
-
+            */
 
         /*elements.
         int maxOccurrences = 3;
