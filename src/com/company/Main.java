@@ -12,9 +12,90 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) {
+        //Roman Numerals Encoder
+        StringBuilder numerals = new StringBuilder();
+        int number = 1669;
+        if (number/1000!=0){
+          for (int i = 0; i < number/1000; i++)
+              numerals.append("M");
+        }
+        if (number/100%10!=0){
+            if (number/100%10<4)
+            {
+                for (int i = 0; i < number/100%10; i++)
+                    numerals.append("C");
+            }
+            if (number/100%10==4)
+            {
+                numerals.append("CD");
+            }
+            if (number/100%10>4&&number/100%10<9)
+            {
+                numerals.append("D");
+                for(int i = 0; i < number/100%10-5; i++)
+                    numerals.append("C");
+            }
+            if (number/100%10==9)
+            {
+                numerals.append("CM");
+            }
+
+        }
+        if (number/10%10!=0){
+            if (number/10%10<4)
+            {
+                for (int i = 0; i < number/10%10; i++)
+                    numerals.append("X");
+            }
+            if (number/10%10==4)
+            {
+                numerals.append("XL");
+            }
+            if (number/10%10>4&&number/10%10<9)
+            {
+                numerals.append("L");
+                for(int i = 0; i < number/10%10-5; i++)
+                    numerals.append("X");
+            }
+            if (number/10%10==9)
+            {
+                numerals.append("XC");
+            }
+
+        }
+        if (number/1%10!=0){
+            if (number/1%10<4)
+            {
+                for (int i = 0; i < number/1%10; i++)
+                    numerals.append("I");
+            }
+            if (number/1%10==4)
+            {
+                numerals.append("IV");
+            }
+            if (number/1%10>4&&number/1%10<9)
+            {
+                numerals.append("V");
+                for(int i = 0; i < number/1%10-5; i++)
+                    numerals.append("I");
+            }
+            if (number/1%10==9)
+            {
+                numerals.append("IX");
+            }
+
+        }
+
+
+
+
+
+
+
+
 
         //Find The Parity Outlier
-        int[] elements = new int[] { 1, 3, 7, 2, 0};
+        /*int[] elements = new int[] { 1, 3, 7, 2, 0};
         int evenCounter = 0;
         int oddCounter = 0;
 
@@ -40,6 +121,7 @@ public class Main {
             }
         System.out.println("evenCounter = " + evenCounter + "; oddCounter = " + oddCounter);
         System.out.println(-3%2);
+        */
         //Delete occurrences of an element if it occurs more than n times
         /*
         int[] elements = new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 };
